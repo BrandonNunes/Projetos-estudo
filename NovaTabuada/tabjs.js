@@ -1,11 +1,13 @@
 const G = document.getElementById('gerar')
 const gerar = document.addEventListener('click', gerartab)
 var res = document.getElementById('tab')
-function gerartab(){
-    let N = document.getElementById('num');
 
-    if(N.value.length =""){
-        alert("Por Favor Didite um Número antes de Gerar")
+
+function gerartab(){
+    var N = document.getElementById('num');
+    const msg = document.querySelector("#msg")
+    if(N.value == 0){
+       alert("Digite algo antes de começar")
 
     }else{
         let Numero = Number(N.value)
@@ -19,5 +21,5 @@ function gerartab(){
         }
 
     }
-
+    
 }
