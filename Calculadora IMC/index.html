@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calulo imc</title>
+</head>
+<body>
+<style>
+   #cab{
+       width: 400px;
+       height: 500px;
+       padding: auto;
+       margin: auto;
+       margin-top: 100px;
+       background-color: #0976f3;
+       border-radius: 10px;
+
+   }
+   #res{
+       background-color: white;
+       padding: auto;
+       margin: auto;
+width: 300px;
+height: 250px;
+border-radius: 10px;
+
+
+   }
+   #resultado{
+       color: black;
+
+
+   }
+   #pre{
+       color: black;
+
+   }
+
+    p{
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+    }
+    body{
+        background-image:linear-gradient(to right, #0d98f5, rgb(29, 20, 156), #210aee);
+    
+    }
+    h1{ color: white;
+text-align: center;
+
+    }
+    input{
+        border-radius: 7px;
+       
+        
+    }
+    input:hover{
+        border-radius: 7px;
+        background-color: rgb(90, 163, 247);
+        transition: 0.5s;
+    }
+  
+
+
+
+</style>
+
+
+
+
+
+    
+<div id= 'cab'>
+    <h1>Calculadora IMC</h1>
+   <p>Nome: <input type="text" name="" id="nome"></p>
+   <p>Peso: <input type="number" min="0" name="" id="peso"></p> 
+   <p>Altura: <input type="number" placeholder="use . ou ," min="1.00" step="0.01" value="1.00"name="" id="altura"></p> 
+  <p> <input type="button" value="Calcular" id="calcular" onclick = "imc()"></p>
+ <div id="res">
+     <p id="pre"><ins>Resultado</ins></p>
+    <p id="resultado" >
+ 
+    </p>
+ </div>
+  
+
+
+</div>
+
+<script>
+
+
+function imc(){
+    const nome = document.getElementById('nome').value;
+    const peso = document.getElementById('peso').value;
+    const altura = document.getElementById('altura').value;
+    const resultado = document.getElementById('resultado')
+    
+    
+
+
+
+if (nome !== ''&& peso !== '' && altura !== ''){
+   
+    var res= (peso / (altura * altura)).toFixed(1);
+   
+
+let clas = '';
+if(res == 0.0){
+
+clas = " digitando dados invalidos para um calculo correto"
+}
+else if(res < 18.5){
+    clas = 'abaixo do peso';
+}else if(res < 24.9){
+    clas = 'com peso normal';
+}else if(res < 29.9){
+    clas = 'acima do peso';
+}else if(res < 34.9){
+    clas = 'com Obesidade grau I';
+}else if(res < 40){
+    clas = 'com obesidade grau II';
+}else{
+    clas = 'com obesidade grau III, CUIDADO!!!'}
+
+resultado.textContent = `Olá ${nome} seu imc é: ${res}, você esta ${clas}`
+
+
+
+}else{
+        resultado.textContent = "preencha todos os dados"
+    }
+    
+
+
+
+
+
+
+
+
+}
+
+</script>
+
+
+
+</body>
+</html>
