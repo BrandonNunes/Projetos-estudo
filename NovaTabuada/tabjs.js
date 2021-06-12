@@ -3,8 +3,8 @@ const gerar = document.addEventListener('click', gerartab)
 var res = document.getElementById('tab')
 function gerartab(){
     let N = document.getElementById('num');
-    
-    if(N.value.length <=""){
+
+    if(N.value.length =""){
         alert("Por Favor Didite um Número antes de Gerar")
 
     }else{
@@ -19,5 +19,5 @@ function gerartab(){
         }
 
     }
-    
+
 }
