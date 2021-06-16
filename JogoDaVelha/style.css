@@ -55,9 +55,9 @@ h1 {
     display: inline-block;
     margin-top: 17px;
 }
-/* .hide {
+.hide {
     display: none !important;
-} */
+}
 
 /* placar */
 #placar {
@@ -92,6 +92,6 @@ h1 {
     top: 150px;
     width: 500px;
     padding: 25px;
-    display: none;
+    
 
 }
