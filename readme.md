@@ -1,1 +1,1 @@
-repositorios para estudo e praticas de linguagens front-end
+Repositorios para estudo e praticas de linguagens front-end
